@@ -10,7 +10,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm dependencies
-          command: npm install --production=false
+          command: yarn install --non-interactive
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -24,7 +24,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm dependencies
-          command: npm install --production=false
+          command: yarn install --non-interactive
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -47,7 +47,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm dependencies
-          command: npm install --production=false
+          command: yarn install --non-interactive
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -64,7 +64,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm dependencies
-          command: npm install --production=false
+          command: yarn install --non-interactive
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
